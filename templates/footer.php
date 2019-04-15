@@ -43,10 +43,9 @@
     </ul>
 </nav>
 <nav class="subnav">
-    <ul class="menu menu--submenu">
-        <!-- <li><a href="/">sminkteoválás</a></li> -->
-        <li><a href="szemoldoktetovalas.html">szemöldök tetoválás</a></li>
-        <li><a href="szemhejtetovalas.html">szemhéj tetoválás</a></li>
-        <li><a href="szajtetovalas.html">száj tetoválás</a></li>
-    </ul>
+    <?php
+        if (has_nav_menu('services_navigation')) :
+            wp_nav_menu(['theme_location' => 'services_navigation', 'menu_class' => 'menu menu--submenu']);
+        endif;
+    ?>
 </nav>
