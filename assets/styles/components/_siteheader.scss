@@ -1,0 +1,81 @@
+.siteheader {
+    display: flex;
+    align-items: center;
+    background-color: $c-darkgray;
+    background-image: url(../images/flowers-light.svg);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 800px auto;
+    background-position: center top;
+    color: $c-lightrose;
+
+    //position: absolute;
+    //color: $white;
+    //background-color: hsl(0, 0, 16%);
+
+    // @include breakpoint(desktop) {
+    // }
+    @media screen and (orientation: portrait) {
+        background-size: auto 100vh;
+    }
+}
+
+.siteheader--light {
+    color: $body-font-color;
+    background-color: $c-lightrose;
+    background-image: none;
+}
+
+.siteheader--transp {
+    background-color: transparent;
+    color: $body-font-color;
+    background-image: none;
+}
+
+.siteheader__logo {
+    //display: flex;
+    align-items: center;
+    margin-right: 16px;
+    min-width: 12rem;
+
+    img {
+        width: 12rem;
+        margin-top: 5%;
+
+        @include breakpoint(tablet) {
+            width: 14rem;
+        }
+
+        @include breakpoint(desktop) {
+            width: 16rem;
+        }
+
+        @include breakpoint(largedesktop) {
+            width: 17rem;
+        }
+    }
+}
+
+.siteheader__nav {
+    margin-left: auto;
+}
+
+.siteheader__section {
+    //margin-left: auto;
+
+    .btn {
+        white-space: nowrap;
+    }
+}
+
+.menubutton {
+    @extend .fauxbtn;
+
+    text-transform: uppercase;
+    font-weight: $global-weight-bold;
+    margin-right: -0.666em;
+
+    @include breakpoint(phablet) {
+        display: none !important;
+    }
+}

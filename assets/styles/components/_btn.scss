@@ -1,0 +1,55 @@
+.fauxbtn {
+    color: inherit;
+    font-family: $header-font-family;
+    display: inline-block;
+    background-image: linear-gradient(360deg, $c-primary 0, $c-primary 100%);
+    background-size: calc(100% - 0.666em) 0.666em;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: all 0.1s ease-in;
+    padding: 0 0.666em 0 0;
+    font-weight: $global-weight-bold;
+
+    &:hover,
+    &:focus {
+        background-size: 100% 1.5em;
+        padding: 0 0.333em;
+    }
+}
+
+.btn {
+    display: inline-block;
+    line-height: 1.125;
+    padding: 1.125em 1.25em;
+    min-width: 18em;
+    border: 0.125em solid darken($c-primary, 5%);
+    color: $white;
+    background-color: $c-primary;
+    //color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+    margin: 0 0 0.5em;
+
+    &:hover,
+    &:focus {
+        background-color: darken($c-primary, 5%);
+        //border-color: #fff;
+        color: #fff;
+    }
+
+    small {
+        font-family: $header-font-family;
+        display: block;
+        font-size: 87.5%;
+    }
+}
+
+.btn--inverse {
+    background-color: $white;
+    color: $body-font-color;
+}

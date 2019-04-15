@@ -1,3 +1,30 @@
-// Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+$c-primary: #f86491; //#ff69b4;
+$c-secondary: #172335; //#0e2241;
+$c-ametist: #675682;
+$c-lightrose: #fbf2f3;
+$c-darkgray: #2e2e2e;
+$white: #fefefe;
+$body-font-family: "Raleway", sans-serif;
+$header-font-family: "Fahkwang", sans-serif;
+$body-font-color: $c-darkgray;
+$body-background: $white;
+$global-weight-bold: 700;
+$global-weight-medium: 500;
+$global-weight-normal: 400;
+$global-width: 84rem;
+$global-font-size: 16px;
+$global-paragraph-margin: 24px;
+
+// Grid Variables
+// Set the number of columns you want to use on your layout.
+$grid-columns: 12;
+// Set the gutter between columns.
+$gutter-width: 5%;
+// Set a margin for the container sides.
+$outer-margin: 16px;
+// Create or remove breakpoints for your project
+// Syntax:
+// name SIZErem,
+$breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem;
+$flexboxgrid-max-width: 1344px;
+

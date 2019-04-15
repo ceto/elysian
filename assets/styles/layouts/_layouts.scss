@@ -1,0 +1,170 @@
+// Layout related styles
+.swrap {
+    overflow: hidden;
+    padding: calc(4rem + 3.5vw) 1rem;
+    margin: 0 auto;
+    width: 100%;
+
+    //max-width: $global-width;
+
+    @include breakpoint(tablet) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    @include breakpoint(desktop) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    @include breakpoint(largedesktop) {
+        padding-left: calc(50vw - #{$global-width/2});
+        padding-right: calc(50vw - #{$global-width/2});
+    }
+
+    &--full {
+        @include breakpoint(tablet) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include breakpoint(desktop) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+
+    &.patternized {
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: 800px auto;
+        background-position: center top;
+        background-image: url(../images/flowers-light.svg);
+
+        @media screen and (orientation: portrait) {
+            background-size: auto 100vh;
+        }
+    }
+
+    &.bordered {
+        border-top: 1px solid $c-lightrose;
+        border-bottom: 1px solid $c-lightrose;
+    }
+}
+
+.swrap--keskeny {
+    @include breakpoint(tablet) {
+        padding-left: calc(50vw - #{$global-width/4});
+        padding-right: calc(50vw - #{$global-width/4});
+    }
+
+    @include breakpoint(desktop) {
+        padding-left: calc(50vw - #{$global-width/3});
+        padding-right: calc(50vw - #{$global-width/3});
+    }
+}
+
+.swrap--narrow {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @include breakpoint(desktop) {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+}
+
+.swrap--nobtm {
+    padding-bottom: 0;
+}
+
+.swrap--notop {
+    padding-top: 0;
+}
+
+.swrap--light {
+    background-color: lighten($color: $c-primary, $amount: 30%);
+
+    &.patternized {
+        background-image: url(../images/flowers-light.svg);
+    }
+}
+
+.swrap--rose {
+    background-color: $c-primary;
+    color: $white;
+}
+
+.swrap--dark {
+    background-color: $c-darkgray;
+    color: $white;
+
+    &.patternized {
+        background-image: url(../images/flowers-light.svg);
+    }
+}
+
+.promoblock {
+    position: relative;
+    background-color: $c-primary;
+    color: $white;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        //mix-blend-mode: multiply;
+        //filter: grayscale(0.75);
+    }
+}
+
+.feles {
+    // //background-image: url(../images/white-marble.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // //text-align: center;
+
+    > * {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 55rem;
+    }
+}
+
+.felezett {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 7%;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.harmas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-gap: 7% 2rem;
+
+    @include breakpoint(tablet) {
+        //grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(desktop) {
+        //grid-template-columns: 1fr 1fr 1fr;
+    }
+}

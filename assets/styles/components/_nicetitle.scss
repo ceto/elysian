@@ -1,0 +1,30 @@
+.nicetitle {
+    text-transform: uppercase;
+    //color: $c-primary;
+    line-height: 1.2;
+    margin: 0 0 1em;
+    transition: inherit;
+    font-size: calc(1.75rem + 0.5vw);
+
+    em {
+        // font-family: $body-font-family;
+        font-weight: $global-weight-medium;
+        //font-weight: $global-weight-bold;
+        text-transform: none;
+        display: block;
+        font-size: 0.75em;
+        //color: $c-primary;
+    }
+}
+
+.nicetitle--accent {
+    color: $c-primary;
+
+    em {
+        .swrap--dark & {
+            color: $c-lightrose;
+        }
+
+        color: $body-font-color;
+    }
+}

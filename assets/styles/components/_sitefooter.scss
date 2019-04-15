@@ -1,0 +1,33 @@
+.sitefooter {
+    font-size: 0.875rem;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a {
+        color: $c-primary;
+        text-decoration: none;
+    }
+}
+
+.sitefooter__section {
+    //margin-left: auto;
+    &:last-of-type() {
+        flex-grow: 1;
+    }
+}
+
+.sitefooter__logo {
+    display: inline-block;
+    width: 75%;
+    max-width: 25rem;
+    margin-top: 2rem;
+
+    @include breakpoint(tablet) {
+        margin: 0 0;
+        float: right;
+    }
+}

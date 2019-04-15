@@ -1,0 +1,82 @@
+.slister {
+    background-color: $c-darkgray;
+    color: $c-lightrose;
+    background-image: url(../images/flowers-light.svg);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 800px auto;
+    background-position: center top;
+
+    @media screen and (orientation: portrait) {
+        background-size: auto 100vh;
+    }
+}
+
+.servicelist {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem 7%;
+    // margin-left: -1rem;
+    // margin-right: -1rem;
+
+    @include breakpoint(phablet) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(desktop) {
+        //grid-template-columns: 1fr 1fr 1fr;
+        // margin-left: -10rem;
+        // margin-right: -10rem;
+    }
+}
+
+.servicecard {
+    position: relative;
+    padding: 0 0 calc(4rem + 5%);
+    //color: $white;
+    //color: $c-lightrose;
+
+    transition: all 0.2s ease-in;
+
+    @include breakpoint(desktop) {
+        font-size: 1.125rem;
+    }
+
+    // @include breakpoint(desktop) {
+    //     padding-left: 2rem;
+    //     padding-right: 2rem;
+    // }
+
+    // @include breakpoint(largedesktop) {
+    //     padding-left: 15%;
+    //     padding-right: 15%;
+    // }
+}
+
+.servicecard__action {
+    position: absolute;
+    bottom: calc(2rem + 5%);
+    //color: var(--cardcol);
+}
+
+.servicecard__title {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: $c-primary;
+    line-height: 1.25;
+    margin: 0 0 1em;
+    transition: inherit;
+
+    a {
+        text-decoration: none;
+    }
+
+    em {
+        font-weight: $global-weight-medium;
+        text-transform: none;
+        display: block;
+        font-size: 0.875em;
+        color: $c-lightrose;
+        //color: $body-font-color;
+    }
+}

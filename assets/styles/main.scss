@@ -2,19 +2,14 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
+@import "../../bower_components/reset-css/sass/_reset.scss";
 @import "../../bower_components/sass-flex-mixin/_flex.scss";
 @import "../../bower_components/flexboxgrid-sass/flexboxgrid.scss";
 // endbower
 
+@import "common/mixins";
 @import "common/global";
-// @import "components/buttons";
-// @import "components/comments";
-// @import "components/forms";
-// @import "components/grid";
-// @import "components/wp-classes";
-// @import "layouts/header";
-// @import "layouts/sidebar";
-// @import "layouts/footer";
-// @import "layouts/pages";
-// @import "layouts/posts";
-// @import "layouts/tinymce";
+@import "common/typography";
+@import "components/components";
+@import "layouts/layouts";
+@import "common/fonts";

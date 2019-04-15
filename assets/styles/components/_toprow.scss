@@ -1,0 +1,23 @@
+.toprow {
+    height: 1.875rem;
+    width: 100%;
+    display: flex;
+    background-color: $c-primary;
+    padding: 0 0.9375rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.875rem;
+    //font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    //border-bottom: 1px solid $c-lightrose;
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+    a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+    }
+}

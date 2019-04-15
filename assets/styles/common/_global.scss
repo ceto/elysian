@@ -1,1 +1,54 @@
+// .container-fluid {
+//     @media only screen and (min-width: #{$flexboxgrid-max-width + $outer-margin*4}) {
+//         padding-left:0;
+//         padding-right:0;
+//     }
+// }
+html {
+    font-size: 15px;
+    box-sizing: border-box;
 
+    @include breakpoint(tablet) {
+        font-size: $global-font-size;
+    }
+}
+
+body {
+    font-family: $body-font-family;
+    background-color: $body-background;
+    color: $body-font-color;
+    margin: 0;
+    padding: 0;
+    font-weight: $global-weight-normal;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+
+    &.mobilepanel-is-active {
+        overflow: hidden;
+    }
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    // Get rid of gap under images by making them display: inline-block; by default
+    display: inline-block;
+    vertical-align: middle;
+
+    // Grid defaults to get images and embeds to work properly
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+.screen-reader,
+.screen-reader-text {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+}

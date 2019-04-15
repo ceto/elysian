@@ -1,0 +1,44 @@
+.mobilepanel {
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $c-darkgray;
+}
+
+.mobilepanel.is-active {
+    z-index: 99;
+    visibility: visible;
+}
+
+.mobilepanel__inner {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    bottom: 1rem;
+    //border: 1px solid $c-primary;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    color: $c-lightrose;
+}
+
+.mobilepanelclose {
+    width: calc(2rem + 1vw);
+    display: inline-block;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:hover,
+    &:focus {
+        color: $c-primary;
+    }
+}
