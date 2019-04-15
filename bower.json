@@ -1,0 +1,7 @@
+{
+  "name": "elysian",
+  "homepage": "https://elysianbeauty.hu/",
+  "authors": ["Gabor Szabo <szabogabi@gmail.com>"],
+  "license": "MIT",
+  "private": true
+}
