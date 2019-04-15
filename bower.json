@@ -1,7 +1,14 @@
 {
   "name": "elysian",
   "homepage": "https://elysianbeauty.hu/",
-  "authors": ["Gabor Szabo <szabogabi@gmail.com>"],
+  "authors": [
+    "Gabor Szabo <szabogabi@gmail.com>"
+  ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "reset-css": "^4.0.1",
+    "photoswipe": "^4.1.3"
+  }
 }
