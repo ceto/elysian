@@ -25,44 +25,81 @@
         </div>
     </div>
 
-    <section id="imageswipe" class="imageswipe imageswipe--tiny" itemscope itemtype="http://schema.org/ImageGallery">
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x600/?beuty,makeup" alt=""/></a>
+    <section id="imageswipe" class="imageswipe imageswipe--tiny psgallery" itemscope
+        itemtype="http://schema.org/ImageGallery">
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1200x800" data-size="1200x800">
+                <img src="//source.unsplash.com/random/800x600/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some other text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x800/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/600x800/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Lorem ipsum text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x500/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x500/?beuty,makeup" alt="" />
+            </a>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1600/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1600/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x1000/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/600x1000/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/700x520/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/700x520/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/12800x700/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/12800x700/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/700x1000/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/700x1000/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x470/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/600x470/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
     </section>
+    <?php get_template_part('templates/pswp'); ?>
 
 
     <?php get_template_part('templates/globalmsg'); ?>

@@ -46,6 +46,10 @@
         transition: all 0.2s ease;
     }
 
+    figcaption {
+        display: none;
+    }
+
     .imageswipe--tiny & {
         height: 33.33vw;
         max-height: 15rem;

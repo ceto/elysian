@@ -5,6 +5,8 @@
 @import "../../bower_components/reset-css/sass/_reset.scss";
 @import "../../bower_components/sass-flex-mixin/_flex.scss";
 @import "../../bower_components/flexboxgrid-sass/flexboxgrid.scss";
+@import "../../bower_components/glidejs/src/assets/sass/glide.core.scss";
+@import "../../bower_components/glidejs/src/assets/sass/glide.theme.scss";
 // endbower
 
 @import "common/mixins";
@@ -13,3 +15,4 @@
 @import "components/components";
 @import "layouts/layouts";
 @import "common/fonts";
+@import "vendor/photoswipe";

@@ -29,15 +29,16 @@
                 $the_services = new WP_Query( $args );
             ?>
             <?php while ($the_services->have_posts()) : $the_services->the_post(); ?>
-                <?php setup_postdata( $post ); ?>
-                <?php get_template_part('templates/servicecard'); ?>
+            <?php setup_postdata( $post ); ?>
+            <?php get_template_part('templates/servicecard'); ?>
             <?php endwhile; ?>
         </div>
     </section>
 
     <section id="bio" class="picandtext swrap patternized">
         <figure class="picandtext__foto">
-            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/jonas-diana-sminktetovalo.jpg" alt="Jónás Diána, Sminktetováló művész" />
+            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/jonas-diana-sminktetovalo.jpg"
+                alt="Jónás Diána, Sminktetováló művész" />
         </figure>
         <div class="picandtext__content">
             <h2 class="nicetitle">Jónás Diána<em>sminktetováló művész</em></h2>
@@ -60,6 +61,7 @@
     </section>
     <?php get_template_part('templates/globalmsg'); ?>
 
+
     <section id="testimonials" class="testimonials swrap aswrap--light apatternized abordered">
         <h2 class="nicetitle nicetitle--accent">
             Vendégeink mondták rólunk
@@ -68,92 +70,86 @@
         <div class="glide" style="width:100%; max-width: 1200px; margin:0 auto">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
+                    <?php while ( have_rows('testimonials') ): the_row();  ?>
                     <li class="glide__slide">
                         <blockquote class="testicard">
-                            <p>
-                                Dia egy angyalka. Gyönyörűen dolgozik, helyrehozza azt is ha valaki elrontja az
-                                arcodat, nincs fájdalom! Kedves, őszinte lány és nagyon hangulatos kis helye van,
-                                ahol igazán le lehet ereszteni, amíg ott vagy. Imádom
-                            </p>
+                            <?php the_sub_field('text'); ?>
                             <cite>
-                                <img src="//source.unsplash.com/random/200x200/?portraiture" alt="" />
-                                Kling Szandra
-                                <span>Teljes generál 2 évente</span></cite>
+                                <img src="//source.unsplash.com/random/200x200/?portraiture"
+                                    alt="<?php the_sub_field('name'); ?>" />
+                                <?php the_sub_field('name'); ?>
+                                <span> <?php the_sub_field('role'); ?></span></cite>
                         </blockquote>
                     </li>
-                    <li class="glide__slide">
-                        <blockquote class="testicard">
-                            <p>
-                                Hálásan köszönöm Neked, hogy gyönyörűvé varázsoltad az arcomat. Reggelente amikor
-                                felkelek, és belenézek a tükröbe, konstatálom, hogy a sminkem tökéletes Imádom a
-                                szám, a szemöldököm, és a szememet is. Köszönöm. Most voltam Nálad harmadszorra, és
-                                megdöbbente, hogy se a szám, se a szemöldökém, se a szememnél nem éreztem fájdalmat,
-                                szuper vagy.
-                            </p>
-                            <cite>
-                                <img src="//source.unsplash.com/random/202x202/?headshot" alt="" />
-                                Patik Marta
-                                <span>3 éve szájtetováltat</span></cite>
-                        </blockquote>
-                    </li>
-                    <li class="glide__slide">
-                        <blockquote class="testicard">
-                            <p>
-                                Hálásan köszönöm Neked, hogy gyönyörűvé varázsoltad az arcomat. Reggelente amikor
-                                felkelek, és belenézek a tükröbe, konstatálom, hogy a sminkem tökéletes Imádom a
-                                szám, a szemöldököm, és a szememet is. Köszönöm. Most voltam Nálad harmadszorra, és
-                                megdöbbente, hogy se a szám, se a szemöldökém, se a szememnél nem éreztem fájdalmat,
-                                szuper vagy.
-                            </p>
-                            <cite>
-                                <img src="//source.unsplash.com/random/202x202/?headshot" alt="" />
-                                Patik Marta
-                                <span>3 éve szájtetováltat</span></cite>
-                        </blockquote>
-                    </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="imageswipe" class="imageswipe" itemscope itemtype="http://schema.org/ImageGallery">
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x600/?beuty,makeup" alt=""/></a>
+    <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1200x800" data-size="1200x800">
+                <img src="//source.unsplash.com/random/800x600/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some other text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x780/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/600x800/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Lorem ipsum text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x500/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/600x470" data-size="600x470">
+                <img src="//source.unsplash.com/random/600x470/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some caption goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x500/?beuty,makeup" alt="" />
+            </a>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1600/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x1000/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1600/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/700x520/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/600x1000/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/12800x700/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/700x520/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/700x1000/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
-        </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/600x470/?beuty,makeup" alt=""/></a>
-        </figure>
-        <figure class="imageswipe__item">
-            <a href="#"><img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt=""/></a>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
+                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
+            </a>
+            <figcaption>Some text goes here</figcaption>
         </figure>
     </section>
+    <?php get_template_part('templates/pswp'); ?>
+
 
 </main>
 <?php endwhile; ?>
