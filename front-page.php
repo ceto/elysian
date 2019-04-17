@@ -32,6 +32,7 @@
             <?php setup_postdata( $post ); ?>
             <?php get_template_part('templates/servicecard'); ?>
             <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
     </section>
 
@@ -61,7 +62,7 @@
     </section>
     <?php get_template_part('templates/globalmsg'); ?>
 
-
+    <?php if ( have_rows('testimonials') ) :  ?>
     <section id="testimonials" class="testimonials swrap aswrap--light apatternized abordered">
         <h2 class="nicetitle nicetitle--accent">
             Vendégeink mondták rólunk
@@ -86,6 +87,7 @@
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
         <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
