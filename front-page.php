@@ -8,11 +8,7 @@
                 <em>Tökéletesség, boldogság, harmónia</em>
             </h2>
             <div class="lead alead--accent alead--narrow">
-                <p>
-                    Képzeld el, hogy reggel felébredsz, és tökéletes a sminked. A sminktetoválás a természetes
-                    szépséged emeli ki. Ideális megoldás azoknak akik reggel sietnek. Ajánlott még szemüveget
-                    viselőknek és azoknak akik tartósan szeretnének elrejteni egy-egy szépséghibát.
-                </p>
+                <?php the_excerpt(); ?>
             </div>
         </div>
     </section>
@@ -42,22 +38,9 @@
                 alt="Jónás Diána, Sminktetováló művész" />
         </figure>
         <div class="picandtext__content">
-            <h2 class="nicetitle">Jónás Diána<em>sminktetováló művész</em></h2>
-            <p class="hero__lead">
-                Dia a legapróbb részletekben is tökéletességre törekszik. Vendégei boldogan és elégedetten viselik
-                kifinomult munkája eredményét.
-            </p>
-            <p>
-                Pályályafutását szerencsés módon Hamburgban kezdte kozmetiskusként. Hazatérve magával ragadata a
-                sminktetoválás világa. Nem volt kérdés, hogy a továbbiakban ezzel fog foglalkozni.
-            </p>
-            <p>
-                A szakma mesterfogásait a Kalcsu Cosmeticsnél és Patkós Alexandra Academyinél tanulta. Ez utóbiban
-                később sminktetováló oktatóként is dolgozott. Négy év gyakorlat után jött el az idő, hogy saját
-                szalont nyisson.
-            </p>
-            <p>Exclusive környezetben Buda szívében várja Vendégeit!</p>
-            <a href="#imageswipe" class="fauxbtn">Nézz körül a stúdióban</a>
+            <div class="copytext">
+                <?php the_content(); ?>
+            </div>
         </div>
     </section>
     <?php get_template_part('templates/globalmsg'); ?>

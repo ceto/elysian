@@ -27,7 +27,7 @@
     add_filter('body_class', 'elysian_body_classes');
     function elysian_body_classes($classes) {
         global $post;
-        if ( is_page_template('tmpl-prices.php') || is_404() || is_page_template('tmpl-contact.php') ) {
+        if ( is_page_template('tmpl-prices.php') || is_archive() || is_search() || is_home() || is_singular('post') || is_404() || is_page_template('tmpl-contact.php') ) {
             $classes[] = 'page-has-glass-banner';
         }
         return $classes;

@@ -8,6 +8,6 @@
             színválasztás továbbá a precíz kivitelezés. Leinformálható referenciákkal rendelkező, korszerű
             eszközöket és minőségi alapanyagokat használó szakembert válassz.
         </p>
-        <a href="#" class="fauxbtn">Lépj kapcsolatba velünk</a>
+        <a href="<?php the_permalink(7)?>" class="fauxbtn">Lépj kapcsolatba velünk</a>
     </div>
 </div>

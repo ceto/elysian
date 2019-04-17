@@ -54,6 +54,15 @@ a {
     }
 }
 
+.stronglead,
+.stronglead > p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: $global-weight-bold;
+    font-family: $header-font-family;
+}
+
+
 .lead--accent,
 .lead--accent > p {
     color: $c-lightrose;
@@ -69,9 +78,6 @@ a {
         columns: 2;
         column-gap: 7%;
     }
-}
-
-.copytext {
     h1,
     h2,
     h3,
@@ -83,6 +89,19 @@ a {
 
     p {
         break-inside: avoid;
+    }
+}
+
+.copytext {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    }
+
+    p {
     }
 
     ul,

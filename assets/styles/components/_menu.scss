@@ -69,6 +69,7 @@
     display: flex;
     //justify-content: center;
 
+
     > li {
         width: 1.5rem;
         margin: 0 0.125rem;
@@ -76,12 +77,11 @@
 }
 
 .menu--mobile {
-    width: 100%;
-    font-size: 1.25rem;
-    font-size: calc(1rem + 1vw);
+    font-size: 1rem;
+    font-size: calc(.875rem + 1.25vw);
     margin: 0;
     padding: 0;
-
+    //text-align: left;
     > li {
         margin: 0.666em 0;
 
@@ -101,9 +101,31 @@
         }
     }
 
-    > li.is-active {
+    > li.active {
         a {
             background-image: linear-gradient(360deg, $c-primary 0, $c-primary 100%);
+        }
+    }
+}
+
+
+.menu--mobile--services {
+    &:before {
+        content:'';
+        width:.75em;
+        height:.75em;
+        background-color: $c-primary;
+        display:block;
+        margin:8% auto 16%;
+    }
+    font-size: 1rem;
+    font-size: calc(.75rem + 1.125vw);
+    //margin-top:5%;
+    //padding-top:5%;
+
+    > li {
+        a {
+            text-transform: none;
         }
     }
 }

@@ -24,6 +24,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
 
+  add_post_type_support( 'page', 'excerpt' );
+
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
