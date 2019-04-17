@@ -1,6 +1,6 @@
 <div class="swrap <?= is_front_page()?'swrap--dark':'' ?> patternized bordered">
     <h3 class="nicetitle">
-        Időt álló és tartós beavatkozás<em>Ne kockáztass. Válassz profi sminktetoválót!</em>
+        Időt álló és tartós beavatkozás<em>Menj biztosra és válassz profi sminktetoválót!</em>
     </h3>
     <div class="lead">
         <p>

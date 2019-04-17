@@ -70,6 +70,7 @@
             color: inherit;
             text-decoration: none;
             padding: 0 0.25em;
+            border: 1px solid transparent;
 
             &:hover,
             &:focus {
@@ -78,6 +79,11 @@
                 //color: darken($c-primary, 10%);
                 //text-decoration: underline;
             }
+        }
+        &.active > a {
+            border-color: $c-primary;
+            // background-color: $c-primary;
+            //color: #fff;
         }
     }
 }

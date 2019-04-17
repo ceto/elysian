@@ -18,19 +18,20 @@
     @media screen and (orientation: portrait) {
         background-size: auto 100vh;
     }
+
+    .page-has-light-banner & {
+        color: $body-font-color;
+        background-color: $c-lightrose;
+        //background-image: none;
+    }
+
+    .page-has-glass-banner & {
+        background-color: transparent;
+        color: $body-font-color;
+        //background-image: none;
+    }
 }
 
-.siteheader--light {
-    color: $body-font-color;
-    background-color: $c-lightrose;
-    background-image: none;
-}
-
-.siteheader--transp {
-    background-color: transparent;
-    color: $body-font-color;
-    background-image: none;
-}
 
 .siteheader__logo {
     //display: flex;

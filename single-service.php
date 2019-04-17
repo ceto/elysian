@@ -3,7 +3,10 @@
 <main id="main" class="main" role="main">
 
     <div class="swrap">
-        <h1 class="nicetitle nicetitle--accent"><?php the_title(); ?></h1>
+        <h1 class="nicetitle nicetitle--accent">
+            <?php the_title(); ?>
+            <em><?php the_field('subtitle'); ?></em>
+        </h1>
         <div class="lead">
             <?php the_content(); ?>
         </div>

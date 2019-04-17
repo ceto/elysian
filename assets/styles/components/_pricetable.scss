@@ -1,35 +1,45 @@
 .pricetable {
     //border: 0.5rem solid scale-color($c-primary, $lightness: 15%);
-    padding: 10% 7.5% 5%;
+    padding: 10% calc(1rem + 5%) 5%;
     color: scale-color($body-font-color, $lightness: 15%);
-    font-size: 1.125rem;
-    //background-color: $body-background;
-    //box-shadow: 0 0 1px 0 rgba(#000,.125);
-    @include breakpoint(large) {
-        //font-size:1.125rem;
+    font-size: 1rem;
+    background-color: $body-background;
+    border:1px solid $c-lightrose;
+    text-align: left;
+    //box-shadow: 0 0 10px 0 rgba(#000,.125);
+    max-width:46rem;
+    margin:0 auto;
+    @include breakpoint(phablet) {
+        font-size:1.125rem;
+        padding: 10% 10% 5%;
     }
 }
 
 .pricetable__head {
-    margin-bottom: 12.5%;
+    margin-bottom: 5%;
     text-align: center;
 
     p {
-        margin: 0;
-        font-weight: $global-weight-bold;
-        text-transform: uppercase;
-        font-size: 1em;
-        color: $c-primary;
+
     }
 
-    h2 {
+    h1,h2,h3 {
         //font-weight: $global-weight-bold;
-        font-size: 2.5em;
+        text-transform: uppercase;
+        font-size: 2.875em;
+        small {
+            display: block;
+            margin: 0;
+            font-weight: $global-weight-bold;
+            text-transform: uppercase;
+            font-size: 33.333%;
+            color: $c-primary;
+        }
     }
 }
 
 .pricetable__foot {
-    border-top: 1px solid scale-color($body-font-color, $lightness: 15%);
+    //border-top: 1px solid scale-color($body-font-color, $lightness: 15%);
     color: $body-font-color;
     //text-align: center;
     padding-top: 5%;
@@ -56,7 +66,7 @@ dl.pricelist {
         //background-color: $body-background;
         max-width: calc(100% - 6em);
         //background-color: red;
-        margin: 0 0 1em;
+        margin: 0 0 .875em;
         //padding-right:.5em;
         font-family: $header-font-family;
         font-weight: $global-weight-bold;
@@ -72,7 +82,7 @@ dl.pricelist {
             text-shadow: none;
             //width: min-content;
             min-width: 100%;
-            //font-family: $body-font-family;
+            font-family: $body-font-family;
             //max-width: 90%;
             font-weight: $global-weight-normal;
             font-style: italic;
@@ -82,12 +92,15 @@ dl.pricelist {
             color: $body-font-color;
         }
 
+
+
         a {
             color: inherit;
+            text-decoration: none;
 
             &:hover,
             &:focus {
-                color: $c-secondary;
+                color: $c-primary;
                 //text-decoration:underline;
             }
         }
@@ -98,7 +111,7 @@ dl.pricelist {
         //font-size:1.125em;
         //font-weight: $global-weight-normal;
         //font-family: $body-font-family;
-        border-bottom: 1px solid currentColor;
+        border-bottom: 2px solid lighten($body-font-color, 35%);
         padding-bottom: 0.5em;
         margin: 2em 0 1em;
         //color: $body-font-color;
@@ -119,27 +132,30 @@ dl.pricelist {
         float: right;
         max-width: 6em;
         white-space: nowrap;
-        margin: 0 0 1em;
+        margin: 0 0 .875em;
         text-align: right;
 
         span {
             position: absolute;
-            right: 0;
-            display: block;
-            margin: 0.333em auto 0 auto;
+            left:0;
+            top:-.75em;
+            display: inline-block;
             line-height: 1;
-            padding: 0.5em 0.75em 0.4em;
             width: min-content;
             font-family: $body-font-family;
+            font-style: italic;
+            letter-spacing: .0666em;
             //border:1px solid $xlight-gray;
-            background-color: $c-primary;
-            color: #fff;
-            box-shadow: 0 0 0.25rem 0 rgba(#000, 0.125);
-            border-radius: 1em;
+            //background-color: $c-primary;
+            color: $c-primary;
+            // box-shadow: 0 0 0.25rem 0 rgba(#000, 0.125);
+            // border-radius: 1em;
             text-transform: uppercase;
-            font-weight: $global-weight-bold;
-            font-size: 0.5em;
+            //font-weight: $global-weight-bold;
+            font-size: 0.6666em;
         }
+
+
 
         &::before {
             content: "";

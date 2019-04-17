@@ -23,4 +23,14 @@
     add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 
+
+    add_filter('body_class', 'elysian_body_classes');
+    function elysian_body_classes($classes) {
+        global $post;
+        if ( is_page_template('tmpl-prices.php') || is_404() || is_page_template('tmpl-contact.php') ) {
+            $classes[] = 'page-has-glass-banner';
+        }
+        return $classes;
+    }
+
 ?>
