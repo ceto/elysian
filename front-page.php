@@ -72,68 +72,23 @@
     </section>
     <?php endif; ?>
 
-    <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1200x800" data-size="1200x800">
-                <img src="//source.unsplash.com/random/800x600/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some other text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/600x800/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Lorem ipsum text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/600x470" data-size="600x470">
-                <img src="//source.unsplash.com/random/600x470/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some caption goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/800x500/?beuty,makeup" alt="" />
-            </a>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/800x1600/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/600x1000/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/700x520/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-            <a href="//source.unsplash.com/random/1280x800" data-size="1280x800">
-                <img src="//source.unsplash.com/random/800x1200/?beuty,makeup" alt="" />
-            </a>
-            <figcaption>Some text goes here</figcaption>
-        </figure>
-    </section>
-    <?php get_template_part('templates/pswp'); ?>
+
+    <?php if ( $gallery = get_field('gallery') ) : ?>
+        <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <?php foreach( $gallery as $image ): ?>
+            <?php $ratiotext=$image['width'].'x'.$image['height']; ?>
+            <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+                <a href="<?php echo $image['url']; ?>" data-size="<?= $ratiotext ?>">
+                    <?php echo wp_get_attachment_image( $image['ID'], 'medium_large' ); ?>
+                </a>
+                <?php if ($image['caption'] !==''): ?>
+                    <figcaption><?php echo $image['caption']; ?></figcaption>
+                <?php endif; ?>
+            </figure>
+            <?php endforeach; ?>
+        </section>
+        <?php get_template_part('templates/pswp'); ?>
+    <?php endif; ?>
 
 
 </main>

@@ -1,10 +1,7 @@
 .imageswipe {
     //background-color: $c-lightrose;
     padding: 0.9375rem 0;
-    //max-width: 110em;
-    //max-width: calc(#{$global-width} + 2%);
-    //margin: 0 auto;
-    //padding-left:calc(2% + .9375rem);
+
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -23,7 +20,6 @@
 
 .imageswipe__item {
     flex: 0 0 auto;
-    //margin-left: 0.625rem;
     height: 45vw;
     max-height: 25rem;
     margin-left: 0.9375rem;
@@ -43,6 +39,7 @@
 
     img {
         height: 100%;
+        width:auto;
         transition: all 0.2s ease;
     }
 
@@ -51,9 +48,10 @@
     }
 
     .imageswipe--tiny & {
+
+        margin-left: 0.9375rem;
         height: 33.33vw;
         max-height: 15rem;
-        margin-left: 0.9375rem;
 
         a {
             //background-color: $c-primary;
