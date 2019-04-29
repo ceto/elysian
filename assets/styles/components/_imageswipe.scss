@@ -1,5 +1,5 @@
 .imageswipe {
-    //background-color: $c-lightrose;
+    //background-color: $c-darkgray;
     padding: 0.9375rem 0;
 
     display: flex;
@@ -40,7 +40,9 @@
     img {
         height: 100%;
         width:auto;
+
         transition: all 0.2s ease;
+        display: block;
     }
 
     figcaption {
@@ -51,10 +53,10 @@
 
         margin-left: 0.9375rem;
         height: 33.33vw;
-        max-height: 15rem;
+        max-height: 20rem;
 
         a {
-            background-color: $c-primary;
+            background-color: $c-lightrose;
             background-clip: content-box;
 
             &:hover,
@@ -69,7 +71,7 @@
 
         img {
             mix-blend-mode: multiply;
-            filter: grayscale(.75) brightness(1.875);
+            filter: grayscale(.875) brightness(.75);
         }
     }
 }
