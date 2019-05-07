@@ -1,8 +1,9 @@
-$c-primary: #f86491; //#ff69b4;
+$c-primary: #ff9298; //#f86491; //#ff69b4;
 $c-secondary: #172335; //#0e2241;
 $c-ametist: #675682;
 $c-lightrose: #fbf2f3;
-$c-darkgray: #2e2e2e;
+$c-darkgray: lighten(#2e2e2e,9%);
+
 $white: #fefefe;
 $body-font-family: "Raleway", sans-serif;
 $header-font-family: "Fahkwang", sans-serif;
