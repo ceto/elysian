@@ -4,7 +4,7 @@
     </h3>
     <div class="lead">
         <p>
-            Sminktetoválásodat hosszú-hosszú ideig fogod viselni. Nagyon fontos a tökéletes forma- és
+            Sminktetoválásodat hosszú ideig fogod viselni. Nagyon fontos a tökéletes forma- és
             színválasztás továbbá a precíz kivitelezés. Leinformálható referenciákkal rendelkező, korszerű
             eszközöket és minőségi alapanyagokat használó szakembert válassz.
         </p>

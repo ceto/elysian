@@ -1,8 +1,8 @@
-$c-primary: #ff9298; //#f86491; //#ff69b4;
+$c-primary: #ff9298; //#f86491; 
 $c-secondary: #172335; //#0e2241;
 $c-ametist: #675682;
-$c-lightrose: #fbf2f3;
-$c-darkgray: lighten(#2e2e2e,9%);
+$c-lightrose: lighten($c-primary,20%); //#fbf2f3;
+$c-darkgray: lighten(#2e2e2e,8%);
 
 $white: #fefefe;
 $body-font-family: "Raleway", sans-serif;
