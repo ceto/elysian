@@ -34,8 +34,12 @@
 
     <section id="bio" class="picandtext swrap patternized">
         <figure class="picandtext__foto">
+            <?php if ($sideill=get_field('sideill')) :?>
+            <?php echo wp_get_attachment_image( $sideill['ID'], 'full' ); ?>
+            <?php else: ?>
             <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/jonas-diana-sminktetovalo.jpg"
                 alt="Jónás Diána, Sminktetováló művész" />
+            <?php endif; ?>
         </figure>
         <div class="picandtext__content">
             <div class="copytext">
@@ -74,20 +78,20 @@
 
 
     <?php if ( $gallery = get_field('gallery') ) : ?>
-        <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <?php foreach( $gallery as $image ): ?>
-            <?php $ratiotext=$image['width'].'x'.$image['height']; ?>
-            <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
-                <a href="<?php echo $image['url']; ?>" data-size="<?= $ratiotext ?>">
-                    <?php echo wp_get_attachment_image( $image['ID'], 'medium_large' ); ?>
-                </a>
-                <?php if ($image['caption'] !==''): ?>
-                    <figcaption><?php echo $image['caption']; ?></figcaption>
-                <?php endif; ?>
-            </figure>
-            <?php endforeach; ?>
-        </section>
-        <?php get_template_part('templates/pswp'); ?>
+    <section id="imageswipe" class="imageswipe psgallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <?php foreach( $gallery as $image ): ?>
+        <?php $ratiotext=$image['width'].'x'.$image['height']; ?>
+        <figure class="imageswipe__item" itemscope="" itemtype="http://schema.org/ImageObject">
+            <a href="<?php echo $image['url']; ?>" data-size="<?= $ratiotext ?>">
+                <?php echo wp_get_attachment_image( $image['ID'], 'medium_large' ); ?>
+            </a>
+            <?php if ($image['caption'] !==''): ?>
+            <figcaption><?php echo $image['caption']; ?></figcaption>
+            <?php endif; ?>
+        </figure>
+        <?php endforeach; ?>
+    </section>
+    <?php get_template_part('templates/pswp'); ?>
     <?php endif; ?>
 
 

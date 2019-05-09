@@ -35,6 +35,9 @@
         background-color: #fff;
         padding: 5px;
         border: 1px solid darken($c-lightrose, 2.5%);
+        &:hover, &:focus {
+            cursor: zoom-in;
+        }
     }
 
     img {
@@ -53,7 +56,7 @@
 
         margin-left: 0.9375rem;
         height: 33.33vw;
-        max-height: 20rem;
+        max-height: 15rem;
 
         a {
             background-color: $c-lightrose;

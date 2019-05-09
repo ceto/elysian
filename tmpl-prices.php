@@ -9,8 +9,12 @@
     <div class="swrap swrap--notop patternized">
         <div class="row center-xs">
             <div class="col-lg-6 show-for-desktop">
+                <?php if ($sideill=get_field('sideill')) :?>
+                <?php echo wp_get_attachment_image( $sideill['ID'], 'full' ); ?>
+                <?php else: ?>
                 <img src="<?= get_stylesheet_directory_uri(); ?>/assets/images/jonas-diana-sminktetovalo.jpg"
                     alt="Jónás Diána, Sminktetováló művész" />
+                <?php endif; ?>
             </div>
             <div class="col-lg-6">
                 <div class="pricetable">
