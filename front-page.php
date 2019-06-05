@@ -63,8 +63,8 @@
                         <blockquote class="testicard">
                             <?php the_sub_field('text'); ?>
                             <cite>
-                                <img src="//source.unsplash.com/random/200x200/?portraiture"
-                                    alt="<?php the_sub_field('name'); ?>" />
+                                <!-- <img src="//source.unsplash.com/random/200x200/?portraiture"
+                                    alt="<?php the_sub_field('name'); ?>" /> -->
                                 <?php the_sub_field('name'); ?>
                                 <span> <?php the_sub_field('role'); ?></span></cite>
                         </blockquote>
